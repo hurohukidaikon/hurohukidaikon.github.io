@@ -8,4 +8,20 @@
     <h1>Hello world.</h1>
     <p>hogehoge</p>
   </body>
+  <script type="text/javascript">
+    // ServiceWorker関係
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service_wroker.js')
+      .then(
+        function (registration) {
+          console.log('ServiceWorker registration successed with scope: ', registration.scope);
+        }
+      )
+      .catch(
+        function (error) {
+          console.log('ServiceWorker registration failed with error: ', error);
+        }
+      );
+    }
+  </script>
 </html>
